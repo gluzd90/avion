@@ -1,0 +1,7 @@
+.services {
+  display: none;
+
+  @include small-tablet {
+    display: block;
+  }
+}

@@ -1,0 +1,122 @@
+.products {
+  padding-top: 80px;
+  padding-bottom: 56px;
+
+  @include small-tablet {
+    padding-top: 48px;
+    padding-bottom: 38px;
+  }
+
+  &__item {
+    position: relative;
+    grid-column: 3 span;
+    min-height: 462px;
+
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+
+    @include small-tablet {
+      grid-column: 2 span;
+      min-height: 288px;
+      margin-bottom: 0;
+    }
+
+    & img {
+      width: 100%;
+
+      @include tablet {
+        height: 500px;
+      }
+
+      @include small-tablet {
+        height: 250px;
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 35px;
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 33px;
+
+    @include small-tablet {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__content {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+
+    @include small-tablet {
+      // height: 110px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 8px;
+    margin-bottom: auto;
+  }
+
+  &__link {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--dark-primary);
+    transition: var(--trs);
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+
+    &:focus::before {
+      outline: none;
+    }
+
+    &:focus-visible::before {
+      outline: 2px dashed currentColor;
+      outline-offset: var(--outline-offset);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    &:active {
+      color: var(--dark-primary);
+    }
+  }
+
+  &__price {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--dark-primary);
+  }
+
+  &__link--btn {
+    display: flex;
+  }
+
+  &__link--btn {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+}

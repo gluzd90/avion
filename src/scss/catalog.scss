@@ -1,0 +1,18 @@
+@import "mixins";
+@import "vars";
+@import "fonts";
+@import "settings";
+
+// blocks
+@import "./blocks/btn";
+@import "./blocks/title";
+@import "./blocks/form";
+@import "./blocks/inner-hero";
+
+// components
+@import "./components_main/header";
+@import "./components_catalog/catalog";
+@import "./components_catalog/filters";
+// @import "./components_main/benefits";
+// @import "./components_main/news";
+@import "./components_main/footer";

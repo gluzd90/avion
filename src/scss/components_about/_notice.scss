@@ -1,0 +1,63 @@
+.notice {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-primary);
+  padding: 10px 16px;
+  gap: 8px;
+
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--white);
+
+    @include small-tablet {
+      flex-basis: 320px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    color: var(--white);
+    transform: translateY(-50%);
+    transition: var(--trs);
+
+    @include small-tablet {
+      right: 15px;
+      width: auto;
+      padding: 0;
+    }
+
+    & svg {
+      display: block;
+      fill: currentColor
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed currentColor;
+      outline-offset: var(--outline-offset);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    &:active {
+      color: var(--light-grey);
+    }
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

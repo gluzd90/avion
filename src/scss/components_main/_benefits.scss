@@ -1,0 +1,109 @@
+.benefits {
+  padding-top: 60px;
+  padding-bottom: 86px;
+
+  @include small-tablet {
+    padding-top: 0;
+    padding-bottom: 45px;
+  }
+
+  &__item {
+    grid-column: 3 span;
+    padding-top: 40px;
+    padding-right: 30px;
+    min-height: 124px;
+    background-position: top left;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+
+    @include small-tablet {
+      grid-column: 4 span;
+      min-height: 116px;
+      padding-right: 0;
+    }
+
+  }
+
+  &__img {
+    background-image: url('../img/Delivery.svg');
+  }
+
+  &__img2 {
+    background-image: url('../img/Checkmark--outline.svg');
+  }
+
+  &__img3 {
+    background-image: url('../img/Purchase.svg');
+  }
+
+  &__img4 {
+    background-image: url('../img/Sprout.svg');
+  }
+
+  &__title {
+    margin-bottom: 51px;
+
+    @include small-tablet {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--dark-primary);
+    margin-bottom: 8px;
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--dark-primary);
+  }
+
+  &__about {
+    padding-top: 80px;
+    padding-bottom: 82px;
+
+    @include tablet {
+      padding: 0;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__item--about {
+    padding: 48px;
+    padding-top: 84px;
+    background-color: var(--light-grey);
+    background-position: 40px 40px;
+
+    @include small-desktop {
+      padding: 30px;
+      padding-top: 84px;
+    }
+
+    @include small-tablet {
+      padding: 24px;
+      padding-top: 72px;
+    }
+  }
+
+  &__list {
+    @include small-tablet {
+      gap: 36px;
+    }
+  }
+
+  &__list--about {
+    row-gap: 24px;
+  }
+}
